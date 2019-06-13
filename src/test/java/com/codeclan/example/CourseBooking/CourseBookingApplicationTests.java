@@ -64,8 +64,8 @@ public class CourseBookingApplicationTests {
 	}
 
 	@Test
-	public void getCustomerByToenAndAgeForCourse() {
-		List<Customer> result = customerRepository.findCustomerByTownAndAgeAndBookingsCourseId("Glasgow", 25, 2L);
+	public void getCustomerByTownAndAgeForCourse() {
+		List<Customer> result = customerRepository.findCustomerByAgeGreaterThanAndTownAndBookingsCourseId(25, "Glasgow", 1L);
 		assertEquals(1, result.size());
 	}
 }
